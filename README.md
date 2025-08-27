@@ -53,6 +53,31 @@ conda create -n wmm python=3.10 -y
 conda activate wmm
 pip install -r requirements.txt
 ```
+### Option C — Ollama (required for MedGemma summaries)
+
+We use [**Ollama**](https://ollama.ai/) to serve the MedGemma model locally.
+
+1. **Install Ollama**
+   - **macOS / Windows**: download from <https://ollama.ai/download>  
+   - **Linux**:  
+     ```bash
+     curl -fsSL https://ollama.com/install.sh | sh
+     ```
+
+2. **Pull the MedGemma model**
+   ```bash
+   ollama pull amsaravi/medgemma-4b-it:q6
+
+3. **Run the Ollama server**
+   ```bash
+   ollama serve
+
+4. **Verify installation**
+   ```bash
+   ollama list
+You should see amsaravi/medgemma-4b-it:q6 listed.
+
+✅ Note: Keep Ollama running in a separate terminal session while using the chat/summary features of this project.
 
 ---
 
